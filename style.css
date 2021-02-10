@@ -307,6 +307,29 @@ footer .container {
 	padding: 40px 20px;
 }
 
+@media (min-width: 768px) {
+	footer .container {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.footA {
+		flex: 0 0 40%;
+	}
+
+	.footB {
+		flex: 0 0 60%;
+	}
+
+	.footC {
+		flex: 0 0 100%;
+	}
+}
+
 /* footA site info */
 .footA h2 {
 	margin-top: 0px;
@@ -377,3 +400,140 @@ footer .container {
 	}
 }
 
+/* footC copyright */
+.footC {
+	font-size: 12px;
+	text-align: center;
+	font-family: 'Montserrat', 'sans-serif';
+}
+
+/* footD SNS menu */
+.footD {
+	margin-top: 20px;
+}
+
+.footD ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footD a {
+	display: block;
+	margin-right: 8px;
+	padding: 0;
+	color: inherit;
+	font-size: 16px;
+	text-decoration: none;
+	border: solid 1px currentColor;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.footD a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+/* header */
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	opacity: 0.8;
+}
+
+/* headA site name */
+.headA {
+	display: inline-block;
+	line-height: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #5d9ab2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-family: 'Montserrat', 'sans-serif';
+	font-size: 24px;
+	text-decoration: none;
+}
+
+/* headB navigation menu */
+.headB ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.headB a {
+	display: block;
+	padding: 15px;
+	color: inherit;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.headB a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+	header .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.headB ul {
+		display: flex;
+	}
+}
+
+/* headC toggle button */
+@media (max-width: 767px) {
+	/* set for small display */
+	header .container-small {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.headC {
+		margin-right: 10px;
+		padding: 0;
+		border: none;
+		outline: none;
+		background: none;
+		font-size: 28px;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+
+	.headC:hover {
+		opacity: 0.3;
+	}
+
+	.headB {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	/* set for large display */
+	.headC {
+		display: none;
+	}
+
+	.headB {
+		display: block !important;
+	}
+}
