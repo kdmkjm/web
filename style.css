@@ -303,13 +303,13 @@ footer {
 	background-color: var(--dark-main-color);
 }
 
-footer.container {
+footer .container {
 	padding: 40px 20px;
 }
 
 /* footA site info */
 .footA h2 {
-	margin-top: 0;
+	margin-top: 0px;
 	margin-bottom: 10px;
 	font-family: 'Montserrat', 'sans-serif';
 	font-size: 30px;
@@ -325,5 +325,55 @@ footer.container {
 .footA a {
 	color: inherit;
 	text-decoration: none;
+}
+
+.footA {
+	margin-bottom: 30px;
+}
+
+/* footB : footer menu */
+.footB div {
+	margin-bottom: 20px;
+}
+
+.footB h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: solid 1px currentColor;
+	font-size: 14px;
+}
+
+.footB ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footB a {
+	display: block;
+	padding: 5px;
+	color: inherit;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.fontB a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+	.footB {
+		display: flex;
+	}
+
+	.footB div {
+		flex: 1;
+	}
+
+	/* 선택자를 :first-child로 설정시 첫번째 자식 요소가 선택 */
+	/* :not()을 사용하므로써 첫번째 자식 요소를 제외한 나머지 요소 선택 */
+	.footB div:not(:first-child) {
+		margin-left: 40px;
+	}
 }
 
